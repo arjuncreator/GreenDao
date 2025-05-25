@@ -94,6 +94,8 @@ The application will be available at http://localhost:5000
 │   └── vite.ts            # Vite integration
 ├── shared/                # Shared types and schemas
 └── README.md
+
+
 ## 🔧 Configuration
 
 ### Environment Variables
