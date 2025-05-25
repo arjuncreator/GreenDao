@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 84% 4.9%;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --primary: 142 76% 36%;
+  --primary-foreground: 355.7 100% 97.3%;
+  --secondary: 262 83% 58%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 43 96% 56%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 142 76% 36%;
+  --radius: 0.5rem;
+  
+  /* Eco-specific colors */
+  --eco-primary: 142 76% 36%;
+  --eco-secondary: 262 83% 58%;
+  --eco-accent: 43 96% 56%;
+  --eco-dark: 220 17% 17%;
+  --eco-light: 210 20% 98%;
+}
+
+.dark {
+  --background: 222 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --popover: 222 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --primary: 142 76% 36%;
+  --primary-foreground: 355.7 100% 97.3%;
+  --secondary: 262 83% 58%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 43 96% 56%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 142 76% 36%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom eco-friendly styles */
+.eco-gradient {
+  background: linear-gradient(135deg, hsl(var(--eco-primary)) 0%, #16a34a 100%);
+}
+
+.eco-card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-100;
+}
+
+.eco-button-primary {
+  @apply bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.eco-button-secondary {
+  @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.tab-button {
+  @apply text-gray-500 transition-colors duration-200;
+}
+
+.tab-button.active {
+  @apply text-green-500 bg-green-50;
+}
+
+.eco-progress-bar {
+  @apply w-full bg-gray-200 rounded-full h-2;
+}
+
+.eco-progress-fill {
+  @apply bg-green-500 h-2 rounded-full transition-all duration-300;
+}

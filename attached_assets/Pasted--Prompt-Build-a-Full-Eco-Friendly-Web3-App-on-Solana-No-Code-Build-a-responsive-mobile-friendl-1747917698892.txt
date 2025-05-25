@@ -1,0 +1,97 @@
+# Prompt: Build a Full Eco-Friendly Web3 App on Solana (No Code)
+
+Build a responsive, mobile-friendly Web3 application named **GreenDAO Lite** using a no-code or low-code approach on **Replit**. This app should blend **eco-lifestyle coaching**, **beginner-friendly DAO governance**, and **token literacy**, integrating the following components:
+
+---
+
+## 🌿 App Summary
+
+Create an eco-conscious platform where users:
+- Receive daily sustainability tips via an API
+- Vote on green proposals using Solana wallet authentication
+- Track token market data with OKX DEX API (read-only)
+- Earn EcoPoints for completed actions and see progress
+
+---
+
+## ✅ Required Features
+
+### 1. **Sensay API Integration (Eco-Coach)**
+- **API Key:** `248db721af4e0a8bbe1af1861dbf0578aa637339b77741b53b9db89a3ae7fbee`
+- **Organization ID:** `7ce04eca-77b3-4902-bf0d-a241dee7b0a3`
+- **Endpoint:** `https://api.sensay.tech/`
+- Fetch 3 daily eco-tips and 1 weekly eco-challenge.
+- Display in a scrolling card-style UI.
+
+### 2. **OKX DEX API Integration (Token Insight)**
+- **API Key:** `2e470507-8ee7-48dd-b1d0-dda06e3a06a2`
+- **Endpoint:** `https://www.okx.com/api/v5/market/tickers?instType=SPOT`
+- Display top Solana tokens (price, % change, volume) in clean UI tiles.
+- Include a visual alignment: “How this token aligns with current proposals.”
+
+### 3. **Solana Wallet Integration (Phantom)**
+- Integrate Phantom Wallet or Solana Wallet Adapter for login.
+- Allow users to:
+  - Submit new DAO proposals (title, description, category)
+  - Vote YES/NO on proposals
+- On-chain vote storage using minimal smart contract or pre-built Solana voting protocol (can use Thirdweb or Crossmint backends).
+
+### 4. **EcoPoint System**
+- Reward users with EcoPoints for completing eco-tasks (off-chain).
+- Store EcoPoints in Firebase or Supabase, mapped to wallet address.
+- Display user ranking on a leaderboard.
+
+---
+
+## 🖥️ UI Requirements
+
+- **Tab 1:** Eco Coach – Daily Tips, Challenges
+- **Tab 2:** DAO Voting – List Proposals, Vote, Submit
+- **Tab 3:** Token Trends – Token list from OKX, sorted by Solana coins
+- **Tab 4:** Progress – EcoPoints tracker and leaderboard
+
+Use TailwindCSS or Replit’s no-code visual builder for modern design. Include icons: leaf, token, vote box, trophy.
+
+---
+
+## 🔒 Auth & Storage
+- Use Phantom Wallet for login.
+- Use Firebase for storing:
+  - EcoPoints
+  - User preferences
+  - Voting metadata (off-chain if on-chain isn't required)
+- Store proposals on-chain using Solana program or Anchor framework.
+
+---
+
+## ⚙️ Tech Stack Overview
+
+| Component           | Tool / Platform                      |
+|--------------------|--------------------------------------|
+| Frontend/UI        | Replit (no-code or HTML/CSS mode)    |
+| Wallet Integration | Phantom Wallet / Solana Adapter      |
+| On-chain Ops       | Solana devnet or pre-built contracts |
+| API: Eco Coaching  | Sensay Wisdom Engine API             |
+| API: Token Data    | OKX DEX API (read-only)              |
+| Off-chain Storage  | Firebase or Supabase                 |
+
+---
+
+## Optional Add-ons
+- Add gamification: streaks for daily eco-tips
+- Use DALL·E-style avatar generation for contributors
+- Provide region-based content via user geolocation
+
+---
+
+## Deployment Target
+
+Deploy on Replit with:
+- Mobile-first view
+- Phantom wallet support for browser-based dApp
+- User-friendly navigation between features
+- Fast Firebase syncing
+
+---
+
+Let me know if you'd like a sample smart contract template, no-code tool suggestion for Solana, or Firebase schema design.
